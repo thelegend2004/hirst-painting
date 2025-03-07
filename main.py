@@ -18,18 +18,24 @@ jack.shape("turtle")
 jack.penup()
 jack.setpos(-275, -275)
 
-for _ in range(1, 101):
+def draw_dot():
     jack.color(choice(formatted_colors))
     jack.pendown()
     jack.dot(30)
     jack.penup()
     jack.forward(60)
+
+def move_back():
+    jack.left(90)
+    jack.forward(60)
+    jack.left(90)
+    jack.forward(600)
+    jack.left(180)
+
+for _ in range(1, 101):
+    draw_dot()
     if _ % 10 == 0:
-        jack.left(90)
-        jack.forward(60)
-        jack.left(90)
-        jack.forward(600)
-        jack.left(180)
+        move_back()
 
 
 screen = Screen()
