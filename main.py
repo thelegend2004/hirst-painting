@@ -14,14 +14,13 @@ for color in colors:
 
 jack = Turtle()
 jack.speed("fastest")
-jack.shape("turtle")
+jack.hideturtle()
 jack.penup()
 jack.setpos(-275, -275)
 
 def draw_dot():
-    jack.color(choice(formatted_colors))
     jack.pendown()
-    jack.dot(30)
+    jack.dot(30, choice(formatted_colors))
     jack.penup()
     jack.forward(60)
 
